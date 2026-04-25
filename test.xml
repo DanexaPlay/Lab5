@@ -1,0 +1,22 @@
+<vector>
+  <main.BasicClasses.Flat>
+    <id>1</id>
+    <name>1</name>
+    <coordinates>
+      <x>1.0</x>
+      <y>1</y>
+    </coordinates>
+    <creationDate>2026-02-28</creationDate>
+    <area>1.0</area>
+    <numberOfRooms>1</numberOfRooms>
+    <isNew>true</isNew>
+    <furnish>BAD</furnish>
+    <transport>NONE</transport>
+    <house>
+      <name>xd</name>
+      <year>1921</year>
+      <numberOfFlatsOnFloor>1</numberOfFlatsOnFloor>
+      <numberOfLifts>1</numberOfLifts>
+    </house>
+  </main.BasicClasses.Flat>
+</vector>
