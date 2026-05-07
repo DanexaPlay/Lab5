@@ -1,11 +1,11 @@
-package main.Console.Commands_temp.AddElement;
+package main.Console.Commands_temp.AddElement.House;
 
 import main.Console.Input;
 
 public class EnterName {
     public static String enterName() throws IllegalArgumentException {
         String name = "";
-        System.out.println("Введите название!");
+        System.out.println("Введите название дома!");
         String s1 = Input.getNextLine();
         if (!s1.isEmpty()) {
             name = s1;
@@ -22,3 +22,4 @@ public class EnterName {
         }
     }
 }
+

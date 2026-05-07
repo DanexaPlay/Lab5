@@ -1,17 +1,17 @@
-package main.Console.Commands_temp.AddElement;
+package main.Console.Commands_temp.AddElement.Flat;
 
 import main.BasicClasses.*;
 import main.Console.Input;
 import java.util.NoSuchElementException;
 
-import static main.Console.Commands_temp.AddElement.CreateHouse.createHouse;
-import static main.Console.Commands_temp.AddElement.EnterArea.enterArea;
-import static main.Console.Commands_temp.AddElement.EnterCoordinates.enterCoordinates;
-import static main.Console.Commands_temp.AddElement.EnterFurnish.enterFurnish;
-import static main.Console.Commands_temp.AddElement.EnterIsNew.enterIsNew;
-import static main.Console.Commands_temp.AddElement.EnterName.enterName;
-import static main.Console.Commands_temp.AddElement.EnterNumberOfRooms.enterNumberOfRooms;
-import static main.Console.Commands_temp.AddElement.EnterTransport.enterTransport;
+import static main.Console.Commands_temp.AddElement.House.CreateHouse.createHouse;
+import static main.Console.Commands_temp.AddElement.Flat.EnterArea.enterArea;
+import static main.Console.Commands_temp.AddElement.Flat.EnterCoordinates.enterCoordinates;
+import static main.Console.Commands_temp.AddElement.Flat.EnterFurnish.enterFurnish;
+import static main.Console.Commands_temp.AddElement.Flat.EnterIsNew.enterIsNew;
+import static main.Console.Commands_temp.AddElement.Flat.EnterName.enterName;
+import static main.Console.Commands_temp.AddElement.Flat.EnterNumberOfRooms.enterNumberOfRooms;
+import static main.Console.Commands_temp.AddElement.Flat.EnterTransport.enterTransport;
 
 public class CreateFlat {
     private static FlatBuilder fb1 = new FlatBuilder();

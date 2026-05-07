@@ -2,7 +2,7 @@ package main.Console.Commands_temp.BasicCommands;
 
 import main.BasicClasses.House;
 import main.CollectionManager;
-import static main.Console.Commands_temp.AddElement.CreateHouse.createHouse;
+import static main.Console.Commands_temp.AddElement.House.CreateHouse.createHouse;
 
 public class CountGreaterThanHouse {
     public static void count_greater_than_house() {

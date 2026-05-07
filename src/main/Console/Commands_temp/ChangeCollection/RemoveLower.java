@@ -2,7 +2,7 @@ package main.Console.Commands_temp.ChangeCollection;
 
 import main.BasicClasses.Flat;
 import main.CollectionManager;
-import static main.Console.Commands_temp.AddElement.CreateFlat.createFlat;
+import static main.Console.Commands_temp.AddElement.Flat.CreateFlat.createFlat;
 
 public class RemoveLower {
     public static void remove_lower() {
