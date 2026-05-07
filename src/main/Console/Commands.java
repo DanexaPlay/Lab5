@@ -2,9 +2,7 @@ package main.Console;
 
 import main.BasicClasses.*;
 import main.CollectionManager;
-
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Commands {
