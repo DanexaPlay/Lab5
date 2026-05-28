@@ -9,6 +9,7 @@
       <element id="extracted-dir" path="$USER_HOME$/Downloads/xstream-distribution-1.4.21-bin/xstream-1.4.21/lib/xstream-jmh-1.4.21.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/xstream-distribution-1.4.21-bin/xstream-1.4.21/lib/xstream-benchmark-1.4.21.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/xstream-distribution-1.4.21-bin/xstream-1.4.21/lib/xstream-hibernate-1.4.21.jar" path-in-jar="/" />
+      <element id="library" level="project" name="xstream-1.4.21" />
     </root>
   </artifact>
 </component>

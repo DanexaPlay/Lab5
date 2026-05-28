@@ -1,5 +1,10 @@
 package main.Console;
 
+import main.Console.Commands.AddElement.Add;
+import main.Console.Commands.BasicCommands.*;
+import main.Console.Commands.ChangeCollection.*;
+import main.Console.Commands.ExecuteScript;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.NoSuchElementException;
@@ -24,63 +29,63 @@ public class Input {
         while (true) {
             switch (text) {
                 case "help":
-                    Commands.help();
+                    Help.execute();
                     continueReading();
                     break;
                 case "info":
-                    Commands.info();
+                    Info.execute();
                     continueReading();
                     break;
                 case "show":
-                    Commands.show();
+                    Show.execute();
                     continueReading();
                     break;
                 case "add":
-                    Commands.add();
+                    Add.execute();
                     continueReading();
                     break;
                 case "clear":
-                    Commands.clear();
+                    Clear.execute();
                     continueReading();
                     break;
                 case "exit":
                     System.exit(0);
                 case "remove_last":
-                    Commands.remove_last();
+                    RemoveLast.execute();
                     continueReading();
                     break;
                 case "reorder":
-                    Commands.reorder();
+                    Reorder.execute();
                     continueReading();
                     break;
                 case "average_of_number_of_rooms":
-                    Commands.average_of_number_of_rooms();
+                    AverageOfNumberOfRooms.execute();
                     continueReading();
                     break;
                 case "save":
-                    Commands.save();
+                    Save.execute();
                     continueReading();
                     break;
                 case "remove_lower":
-                    Commands.remove_lower();
+                    RemoveLower.execute();
                     continueReading();
                     break;
                 case "count_greater_than_house":
-                    Commands.count_greater_than_house();
+                    CountGreaterThanHouse.execute();
                     continueReading();
                     break;
                 default:
                     if (text.matches("^remove_by_id [-]?[0123456789]+$")) {
-                        Commands.remove_by_id(Integer.valueOf(str[1]));
+                        RemoveById.execute(Integer.valueOf(str[1]));
                         continueReading();
                         break;
                     } else if (text.matches("^update [-]?[0123456789]+$")) {
-                        Commands.update(Integer.parseInt(str[1]));
+                        Update.execute(Integer.parseInt(str[1]));
                         continueReading();
                         break;
                     } else if (str[0].matches("filter_by_new") && str.length == 2) {
                         if ((str[1].matches("true")) || str[1].matches("false")) {
-                            Commands.filter_by_new(Boolean.valueOf(str[1]));
+                            FilterByNew.execute(Boolean.valueOf(str[1]));
                         }
                         else {
                             System.out.println("Неверный аргумент!");
@@ -90,7 +95,7 @@ public class Input {
                     } else if ((str != null) && (str.length > 0) && str[0].equals("execute_script")) {
                         try {
                             System.out.println(str[1]);
-                            Commands.execute_script(str[1]);
+                            ExecuteScript.execute(str[1]);
                         } catch (IndexOutOfBoundsException e1) {
                             System.out.println("Не задано название файла!");
                         } catch (IOException e2) {
@@ -146,7 +151,7 @@ public class Input {
                 }
                 else {
                     scannerStack.clear();
-                    Commands.clearFileList();
+                    ExecuteScript.clearFileList();
                     readFromConsole();
                 }
             }

@@ -12,7 +12,6 @@ public class FlatBuilder {
     protected Transport transport; //Поле может быть null
     protected House house;  //Поле может быть null
 
-
     public FlatBuilder name(String name) {
         this.name = name;
         return this;
