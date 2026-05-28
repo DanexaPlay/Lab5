@@ -2,9 +2,10 @@ package main.Console.Commands.ChangeCollection;
 
 import main.BasicClasses.Flat;
 import main.CollectionManager;
+import main.Console.Commands.Command;
 
-public class RemoveById {
-    public static void remove_by_id(int id) {
+public class RemoveById implements Command {
+    public static void execute(int id) {
         try {
             Flat obj = CollectionManager.find_by_id(id);
             CollectionManager.remove_by_id(obj);

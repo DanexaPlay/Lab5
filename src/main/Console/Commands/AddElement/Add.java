@@ -2,12 +2,12 @@ package main.Console.Commands.AddElement;
 
 import main.BasicClasses.Flat;
 import main.CollectionManager;
+import main.Console.Commands.AddElement.Flat.CreateFlat;
+import main.Console.Commands.Command;
 
-import static main.Console.Commands.AddElement.Flat.CreateFlat.createFlat;
-
-public class Add {
-    public static void add() {
-        Flat f1 = createFlat();
+public class Add implements Command {
+    public static void execute() {
+        Flat f1 = CreateFlat.execute();
         CollectionManager.add(f1);
         System.out.println("Объект успешно добавлен!");
     }

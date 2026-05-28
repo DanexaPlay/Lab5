@@ -1,10 +1,11 @@
 package main.Console.Commands.AddElement.Flat;
 
 import main.BasicClasses.Transport;
+import main.Console.Commands.Command;
 import main.Console.Input;
 
-public class EnterTransport {
-    public static Transport enterTransport() throws IllegalArgumentException {
+public class EnterTransport implements Command {
+    public static Transport execute() throws IllegalArgumentException {
         Transport transport;
         System.out.println("Введите транспорт квартиры: NONE, NORMAL, ENOUGH или пропустите строку!");
         String s = Input.getNextLine();
@@ -22,7 +23,7 @@ public class EnterTransport {
                     throw new IllegalArgumentException();
                 }
                 else {
-                    transport = enterTransport();
+                    transport = execute();
                 }
             }
         }

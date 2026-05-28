@@ -5,9 +5,9 @@ import main.Console.Input;
 import java.io.IOException;
 import java.util.HashSet;
 
-public class ExecuteScript {
+public class ExecuteScript implements Command {
     private static HashSet<String> file_list = new HashSet<>();
-    public static void execute_script(String filename) throws IOException {
+    public static void execute(String filename) throws IOException {
         Input.pushCurrentScanner();
         if (file_list.add(filename)) {
             System.out.println("Скрипты выполняются");

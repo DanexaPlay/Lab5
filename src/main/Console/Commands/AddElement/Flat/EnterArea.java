@@ -1,9 +1,10 @@
 package main.Console.Commands.AddElement.Flat;
 
+import main.Console.Commands.Command;
 import main.Console.Input;
 
-public class EnterArea {
-    public static double enterArea() throws IllegalArgumentException {
+public class EnterArea implements Command {
+    public static double execute() throws IllegalArgumentException {
         double area = 0;
         System.out.println("Введите площадь! Дробное число, не больше 16 знаков после запятой");
         try {
@@ -16,7 +17,7 @@ public class EnterArea {
                 throw new IllegalArgumentException();
             }
             else {
-                area = enterArea();
+                area = execute();
             }
         }
         return area;

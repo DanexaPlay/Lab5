@@ -1,9 +1,10 @@
 package main.Console.Commands.AddElement.House;
 
+import main.Console.Commands.Command;
 import main.Console.Input;
 
-public class EnterName {
-    public static String enterName() throws IllegalArgumentException {
+public class EnterName implements Command {
+    public static String execute() throws IllegalArgumentException {
         String name = "";
         System.out.println("Введите название дома!");
         String s1 = Input.getNextLine();
@@ -17,7 +18,7 @@ public class EnterName {
                 throw new IllegalArgumentException();
             }
             else {
-                return name = enterName();
+                return name = execute();
             }
         }
     }

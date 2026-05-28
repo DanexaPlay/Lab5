@@ -1,9 +1,10 @@
 package main.Console.Commands.AddElement.House;
 
+import main.Console.Commands.Command;
 import main.Console.Input;
 
-public class EnterNumbersOfFlatsOnFloor {
-    public static long enterNumberOfFlatsOnFloor() throws IllegalArgumentException {
+public class EnterNumbersOfFlatsOnFloor implements Command {
+    public static long execute() throws IllegalArgumentException {
         long numberOfFlats = 0;
         System.out.println("Введите количество квартир на этаж! Только целое число");
         try {
@@ -16,7 +17,7 @@ public class EnterNumbersOfFlatsOnFloor {
                 throw new IllegalArgumentException();
             }
             else {
-                numberOfFlats = enterNumberOfFlatsOnFloor();
+                numberOfFlats = execute();
             }
         }
         return numberOfFlats;

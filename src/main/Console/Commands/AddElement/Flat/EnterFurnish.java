@@ -1,10 +1,11 @@
 package main.Console.Commands.AddElement.Flat;
 
 import main.BasicClasses.Furnish;
+import main.Console.Commands.Command;
 import main.Console.Input;
 
-public class EnterFurnish {
-    public static Furnish enterFurnish() throws IllegalArgumentException {
+public class EnterFurnish implements Command {
+    public static Furnish execute() throws IllegalArgumentException {
         Furnish furnish;
         System.out.println("Введите дополнительные свойства квартиры: DESIGNER, BAD, LITTLE или пропустите строку!");
         String s = Input.getNextLine();
@@ -22,7 +23,7 @@ public class EnterFurnish {
                     throw new IllegalArgumentException();
                 }
                 else {
-                    furnish = enterFurnish();
+                    furnish = execute();
                 }
             }
         }

@@ -1,9 +1,10 @@
 package main.Console.Commands.AddElement.House;
 
+import main.Console.Commands.Command;
 import main.Console.Input;
 
-public class EnterYear {
-    public static long enterYear() throws IllegalArgumentException {
+public class EnterYear implements Command {
+    public static long execute() throws IllegalArgumentException {
         long year = 0;
         System.out.println("Введите год! Только целое число");
         try {
@@ -16,7 +17,7 @@ public class EnterYear {
                 throw new IllegalArgumentException();
             }
             else {
-                year = enterYear();
+                year = execute();
             }
         }
         return year;

@@ -1,9 +1,10 @@
 package main.Console.Commands.AddElement.Flat;
 
+import main.Console.Commands.Command;
 import main.Console.Input;
 
-public class EnterIsNew {
-    public static boolean enterIsNew() {
+public class EnterIsNew implements Command {
+    public static boolean execute() {
         System.out.println("Введите true если квартира новая, иначе false, или пропустите строку!");
         boolean isnew;
         try {
@@ -19,7 +20,7 @@ public class EnterIsNew {
                 throw new IllegalArgumentException();
             }
             else {
-                isnew = enterIsNew();
+                isnew = execute();
             }
         }
         return isnew;

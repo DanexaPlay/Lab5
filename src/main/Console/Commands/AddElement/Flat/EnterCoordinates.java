@@ -1,10 +1,11 @@
 package main.Console.Commands.AddElement.Flat;
 
 import main.BasicClasses.Coordinates;
+import main.Console.Commands.Command;
 import main.Console.Input;
 
-public class EnterCoordinates {
-    public static Coordinates enterCoordinates() throws IllegalArgumentException {
+public class EnterCoordinates implements Command {
+    public static Coordinates execute() throws IllegalArgumentException {
         Coordinates c1 = null;
         System.out.println("Введите координаты X и Y через пробел!");
         System.out.println("X - дробное число, вводите не больше 8 цифр после запятой, иначе будет погрешность!");
@@ -17,7 +18,7 @@ public class EnterCoordinates {
                 }
                 else {
                     System.out.println("Строка не может быть пустой!");
-                    c1 = enterCoordinates();
+                    c1 = execute();
                     return c1;
                 }
             }
@@ -28,7 +29,7 @@ public class EnterCoordinates {
                     throw new IllegalArgumentException();
                 }
                 else {
-                    c1 = enterCoordinates();
+                    c1 = execute();
                 }
             }
             c1 = new Coordinates(Float.parseFloat(str[0].replace(",", ".")), Long.parseLong(str[1].replace(",", ".")));
@@ -39,7 +40,7 @@ public class EnterCoordinates {
                 throw new IllegalArgumentException();
             }
             else {
-                c1 = enterCoordinates();
+                c1 = execute();
             }
         }
         return c1;

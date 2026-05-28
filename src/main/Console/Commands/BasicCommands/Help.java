@@ -1,7 +1,9 @@
 package main.Console.Commands.BasicCommands;
 
-public class Help {
-    public static void help() {
+import main.Console.Commands.Command;
+
+public class Help implements Command {
+    public static void execute() {
         System.out.println("Список доступных команд:");
         System.out.println("help - вывод всех имеющихся команд");
         System.out.println("info - вывод информации о коллекции");

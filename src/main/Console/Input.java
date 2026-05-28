@@ -29,63 +29,63 @@ public class Input {
         while (true) {
             switch (text) {
                 case "help":
-                    Help.help();
+                    Help.execute();
                     continueReading();
                     break;
                 case "info":
-                    Info.info();
+                    Info.execute();
                     continueReading();
                     break;
                 case "show":
-                    Show.show();
+                    Show.execute();
                     continueReading();
                     break;
                 case "add":
-                    Add.add();
+                    Add.execute();
                     continueReading();
                     break;
                 case "clear":
-                    Clear.clear();
+                    Clear.execute();
                     continueReading();
                     break;
                 case "exit":
                     System.exit(0);
                 case "remove_last":
-                    RemoveLast.remove_last();
+                    RemoveLast.execute();
                     continueReading();
                     break;
                 case "reorder":
-                    Reorder.reorder();
+                    Reorder.execute();
                     continueReading();
                     break;
                 case "average_of_number_of_rooms":
-                    AverageOfNumberOfRooms.average_of_number_of_rooms();
+                    AverageOfNumberOfRooms.execute();
                     continueReading();
                     break;
                 case "save":
-                    Save.save();
+                    Save.execute();
                     continueReading();
                     break;
                 case "remove_lower":
-                    RemoveLower.remove_lower();
+                    RemoveLower.execute();
                     continueReading();
                     break;
                 case "count_greater_than_house":
-                    CountGreaterThanHouse.count_greater_than_house();
+                    CountGreaterThanHouse.execute();
                     continueReading();
                     break;
                 default:
                     if (text.matches("^remove_by_id [-]?[0123456789]+$")) {
-                        RemoveById.remove_by_id(Integer.valueOf(str[1]));
+                        RemoveById.execute(Integer.valueOf(str[1]));
                         continueReading();
                         break;
                     } else if (text.matches("^update [-]?[0123456789]+$")) {
-                        Update.update(Integer.parseInt(str[1]));
+                        Update.execute(Integer.parseInt(str[1]));
                         continueReading();
                         break;
                     } else if (str[0].matches("filter_by_new") && str.length == 2) {
                         if ((str[1].matches("true")) || str[1].matches("false")) {
-                            FilterByNew.filter_by_new(Boolean.valueOf(str[1]));
+                            FilterByNew.execute(Boolean.valueOf(str[1]));
                         }
                         else {
                             System.out.println("Неверный аргумент!");
@@ -95,7 +95,7 @@ public class Input {
                     } else if ((str != null) && (str.length > 0) && str[0].equals("execute_script")) {
                         try {
                             System.out.println(str[1]);
-                            ExecuteScript.execute_script(str[1]);
+                            ExecuteScript.execute(str[1]);
                         } catch (IndexOutOfBoundsException e1) {
                             System.out.println("Не задано название файла!");
                         } catch (IOException e2) {

@@ -1,9 +1,10 @@
 package main.Console.Commands.AddElement.House;
 
+import main.Console.Commands.Command;
 import main.Console.Input;
 
-public class EnterNumberOfLifts {
-    public static int enterNumberOfLifts() throws IllegalArgumentException {
+public class EnterNumberOfLifts implements Command {
+    public static int execute() throws IllegalArgumentException {
         int numberOfLifts = 0;
         System.out.println("Введите количество лифтов! Только целое число");
         try {
@@ -16,7 +17,7 @@ public class EnterNumberOfLifts {
                 throw new IllegalArgumentException();
             }
             else {
-                numberOfLifts = enterNumberOfLifts();
+                numberOfLifts = execute();
             }
         }
         return numberOfLifts;
